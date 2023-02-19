@@ -8,10 +8,16 @@
 ## Enjoy! :D 
 ## Start of code: 
 
-temp = input("Please enter a temperature, format: 36C or 100F. Go:") 
-print(temp[-1])
-if temp[-1] == "C":
-    removelastchar = int(temp[:-1])
-    print(removelastchar * 10)
+# v1
 
-# Next thing to do is to divide removelastchar by 1.8 to produce Fahr
+temp = input("Please enter a temperature, format: 36C or 100F. Go: ") 
+remove = int(temp[:-1])
+if temp[-1] == "C":
+    # remove_c = int(temp[:-1])
+    print(temp + " in Fahrenheit is " + str((remove * 9/5) + 32) + "°F")
+elif temp[-1] == "F":
+    # remove_f = int(temp[:-1])
+    print(temp + " in Celsius is " + str((remove - 32) * 5/9) + "°C")
+else: print(temp + " is wrong syntax!")
+
+# Done v1 Feb 19, 9:23am
